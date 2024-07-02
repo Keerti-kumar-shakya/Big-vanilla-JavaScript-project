@@ -1,0 +1,266 @@
+.contact-page {
+ 
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Roboto;
+}
+
+.box4 {
+
+  width: 600px;
+  height: 450px;
+}
+
+.Author-bio {
+  
+  display: flex;
+ flex-direction: column;
+ justify-content:left;
+
+}
+
+.bio1{
+  height: 112px;
+
+ 
+}
+
+.author-1 {
+
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+
+}
+
+.author-Email {
+  display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.author-phone{
+  display: flex;
+justify-content:left;
+align-items: center;
+
+}
+
+.author-Email img, .author-phone img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e71948;
+ object-fit: cover;
+ object-position: center;
+
+}
+
+.Email-id , .mobile-number{
+  font-size: 25px;
+padding-left: 20px;
+}
+
+.author-CV button a {
+  text-decoration: none;
+  color: white;
+  background-color: #e71948;
+  padding: 15px 20px 15px 20px;
+  font-size: 25px;
+}
+
+.author-CV button {
+  background-color: #e71948;
+  padding: 15px 20px 15px 20px;
+  margin-right: 170px;
+  border-radius: 1rem;
+  border: none;
+margin-top: 13px;
+
+}
+
+.author-CV button:hover {
+  padding: 20px 25px 20px 25px;
+transition: 0.15s;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.user-data input:nth-child(1), .user-data input:nth-child(2) {
+ 
+  font-size: 20px;
+  width: 100%;
+height: 60px;
+background-color: #272627;
+border-radius: 0.5rem;
+color: white;
+border: none;
+padding-left: 10px;
+}
+
+
+
+textarea {
+  
+  width: 100%;
+  height: 250px;
+  background-color: #272627;
+  border-radius: 0.5rem;
+  font-size: 20px;
+  color: white;
+  border: none;
+  padding-left: 10px;
+}
+
+.submit-button {
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 0.3rem;
+  font-size: 20px;
+  font-family: Roboto, Arial;
+  background-color: lightslategray;
+  color: white;
+  text-shadow: 0 0 2px black,0 0 5px lightsalmon;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  color: rgb(61, 60, 60);
+  background-color: whitesmoke;
+  transition: 0.15s;
+
+}
+
+
+/*###########################################################*/
+
+
+@media only screen and (max-width:1283px ){
+  .contact-page{
+ padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width:1178px ){
+  .contact-page{
+ flex-direction: column;
+    
+  }
+}
+
+
+@media only screen and (max-width:604px ){
+  .box4 {
+    width: 400px;
+    height: 350px;
+  }
+
+  .bio1{
+    height: 80px;
+    border:1px solid white;
+   
+  }
+
+  .user-data input:nth-child(1), .user-data input:nth-child(2) {
+    width: 400px;
+    height: 40px;
+   font-size: 15px;
+  }
+
+  textarea {
+    height: 200px;
+    font-size: 15px;
+  }
+
+  .author-CV button {
+ 
+    padding: 15px 20px 15px 20px;
+    margin-right: 170px;
+    border-radius: 1rem;
+    border: none;
+  margin-top: 8px;
+  }
+
+  .author-CV button a {
+  
+  font-size: 20px;
+  }
+
+  .author-Email img, .author-phone img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Email-id , .mobile-number{
+    font-size: 20px;
+  padding-left: 20px;
+  }
+
+  .author-1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width:425px ){
+  .box4 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .bio1{
+    height: 70px;
+   
+   
+  }
+
+  .user-data input:nth-child(1), .user-data input:nth-child(2) {
+    width: 300px;
+    height: 30px;
+
+  }
+
+  textarea {
+    height: 160px;
+  }
+
+  .author-CV button {
+ 
+    padding: 15px 20px 15px 20px;
+    margin-right: 20px;
+    border-radius: 1rem;
+    border: none;
+  margin-top: 8px;
+  }
+
+  .author-CV button a {
+  
+  font-size: 15px;
+  }
+
+  .author-Email img, .author-phone img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Email-id , .mobile-number{
+    font-size: 18px;
+  padding-left: 20px;
+  }
+
+  .author-1 {
+    font-size: 35px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+  }
+}

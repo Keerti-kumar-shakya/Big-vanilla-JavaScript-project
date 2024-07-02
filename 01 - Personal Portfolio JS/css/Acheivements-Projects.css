@@ -1,0 +1,439 @@
+.Acheivements-Projects-page {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.Acheivements-Project {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+
+
+}
+
+.Acheivements-Project span{
+color:#04adf3;
+}
+
+.Projects-container  {
+ 
+  width: 1600px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 650px;
+
+}
+
+.Achievements-achieved {
+
+  width: 1600px;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+
+}
+
+.achieve-box {
+
+}
+
+.Achievements {
+  font-size: 30px;
+  font-weight: bold;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.list-Achievements {
+  border: 1px solid white;
+  display: flex;
+ 
+ 
+}
+
+.types-achievements {
+  border: 1px solid white;
+  width: 533.33px;
+}
+
+
+.Projects-para {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(218, 238, 144);
+  text-shadow: 0 0 15px rgb(189, 172, 172),0 4px 0 rgb(76, 68, 68),4px 0 0 rgb(151, 141, 121) ;
+}
+
+
+.Projects-links {
+  border: 3px solid lightgoldenrodyellow;
+  display: flex;
+  flex-direction: row;
+justify-content: space-around;
+align-items: center;
+  flex-wrap: wrap;
+border-radius: 0.5rem;
+
+}
+
+.Projects-links:hover{
+  box-shadow: 0 0 35px white, 0 0 35px lightseagreen, 0 0 35px lightpink;
+  transition: 0.15s;
+}
+
+.box3{
+position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+ perspective: 1000px;
+
+}
+
+.box3-transform { 
+  background-color: rgb(189, 240, 227);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: rgb(206, 182, 130) 0px 10px 20px 0px, rgb(204, 0, 255) 0px 18px 26px -18px;
+  
+  transform: rotateY(180deg);
+
+ transition: all 0.9s ease-in-out;
+
+z-index: 4;
+
+}
+
+.project-discription {
+  position: relative;
+  border: 1px solid red;
+  width: 200px;
+ height: 75px;
+  border-radius: 0.5rem;
+  background:linear-gradient(0deg, rgb(196, 196, 212) 0%, rgb(150, 150, 240) 35%, rgb(138, 187, 197) 100%);
+  box-shadow: rgb(226, 107, 152) 0px 10px 20px 0px, rgb(0, 200, 255) 0px 18px 26px -18px;
+   z-index: 3;
+   perspective: 1000px;
+   color: rgba(10, 10, 10, 1);
+   font-weight: bold;
+   font-family: Roboto;
+}
+
+
+.box3 img, .box3-transform {
+  position: absolute;
+  top: 0;
+  width: 200px;
+ height: 200px;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+  border: none;
+ 
+}
+
+
+
+.box3:hover .box3-transform{
+
+  transform: rotateY(0deg);
+ 
+}
+
+.project-discription:hover .box3-transform{
+  transform: rotateY(0deg);
+ 
+}
+
+.box3-transform a{
+text-decoration: none;
+color: black;
+
+
+
+}
+
+.box3-transform a:hover{
+  text-shadow: 0 0 5px rgb(221, 197, 153), 0 0 5px rgb(255, 217, 0);
+
+}
+
+/*############################################################*/
+
+@media only screen and (max-width: 1656px){
+  .Acheivements-Projects-page {
+    padding-left: 0px;
+  }
+
+  .Projects-container {
+    width: 1300px;
+    height: 640px;
+    grid-template-rows: 50px 580px;
+  }
+
+  .box3 {
+    width: 170px;
+    height: 170px;
+  }
+
+  .project-discription {
+    width: 170px;
+    font-size: 15px;
+  }
+
+  .box3 img, .box3-transform {
+    width: 170px;
+    height: 170px;
+  }
+
+  .Achievements-achieved {
+    width: 1300px;
+    height:300px; ;
+    grid-template-rows: 40px 1fr;
+  }
+
+  .types-achievements {
+    
+    width: 433.33px;
+  }
+  
+
+  .Acheivements-Project {
+    font-size: 35px;
+  
+  }
+
+  .Achievements {
+    font-size: 30px;
+  }
+  
+
+}
+
+
+@media only screen and (max-width: 1279px){
+  .Acheivements-Projects-page {
+    padding-left: 0px;
+    height: 1000px;
+  }
+
+  .Projects-container {
+    width: 1120px;
+    height: 550px;
+    grid-template-rows: 50px 500px;
+  }
+
+  .box3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-discription {
+    width: 150px;
+    font-size: 14px;
+  }
+
+  .box3 img, .box3-transform {
+    width: 150px;
+    height: 150px;
+  }
+
+  .Achievements-achieved {
+    width: 1120px;
+    height:300px; ;
+    grid-template-rows: 40px 1fr;
+  }
+
+  .types-achievements {
+    
+    width: 373.33px;
+  }
+
+  .Acheivements-Project {
+    font-size: 35px;
+  
+  }
+
+  .Achievements {
+    font-size: 30px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 1094px){
+  .Acheivements-Projects-page {
+    padding-left: 0px;
+    height: 1050px;
+    justify-content: start;
+   
+  }
+
+  .Projects-container {
+    width: 750px;
+    height: 750px;
+    grid-template-rows: 50px 700px;
+  }
+
+  .box3 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .project-discription {
+    width: 130px;
+    font-size: 14px;
+  }
+
+  .box3 img, .box3-transform {
+    width: 130px;
+    height: 130px;
+  }
+
+  .Achievements-achieved {
+    width: 750px;
+    height:250px; ;
+    grid-template-rows: 40px 1fr;
+    margin-top: 10px;
+  }
+
+  .types-achievements {
+    
+    width: 250px;
+  }
+
+  .Acheivements-Project {
+    font-size: 35px;
+  
+  }
+
+  .Achievements {
+    font-size: 30px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 726px){
+  .Acheivements-Projects-page {
+    padding-left: 0px;
+    height: 1050px;
+    justify-content: start;
+   
+  }
+
+  .Projects-container {
+    width: 540px;
+    height: 830px;
+    grid-template-rows: 37px 750px;
+  }
+
+  .box3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-discription {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .box3 img, .box3-transform {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Achievements-achieved {
+    width: 540px;
+    height:250px; ;
+    grid-template-rows: 40px 1fr;
+    margin-top: 10px;
+  }
+
+  .types-achievements {
+    
+    width: 180px;
+  }
+
+  .Acheivements-Project {
+    font-size: 28px;
+  
+  }
+
+  .Achievements {
+    font-size: 25px;
+  }
+  
+  .Projects-para {
+    font-size: 25px;
+  }
+}
+
+
+@media only screen and (max-width: 726px){
+  .Acheivements-Projects-page {
+    padding-left: 0px;
+    height: 1250px;
+    justify-content: start;
+   
+  }
+
+  .Projects-container {
+    width: 390px;
+    height:985px;
+    grid-template-rows: 37px 900px;
+  }
+
+  .box3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .project-discription {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  .box3 img, .box3-transform {
+    width: 120px;
+    height: 120px;
+  }
+
+  .Achievements-achieved {
+    width: 390px;
+    height:280px; ;
+    grid-template-rows: 40px 1fr;
+    margin-top: 15px;
+  }
+
+  .types-achievements {
+    
+    width: 130px;
+  }
+
+  .Acheivements-Project {
+    font-size: 25px;
+  
+  }
+
+  .Achievements {
+    font-size: 25px;
+  }
+  
+  .Projects-para {
+    font-size: 20px;
+  }
+}
+
+
+

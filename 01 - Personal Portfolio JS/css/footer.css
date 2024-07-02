@@ -1,0 +1,31 @@
+.footer {
+
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightslategray;
+  z-index: 10;
+  }
+  
+  .footer p {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  /*#############################################################*/
+
+  @media only screen and (max-width: 425px){
+    .footer {
+      height: 80px;
+    }
+
+    .footer p {
+      font-size: 20px;
+    }
+  }

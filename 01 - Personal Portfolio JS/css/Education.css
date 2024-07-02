@@ -1,0 +1,521 @@
+.Education-page{
+background-color: black;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.journey {
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+.journey span {
+  color: #00a5ea;
+}
+
+.Education-experience-heading {
+ 
+  width: 1235px;
+  height: 70px;
+  display: grid;
+grid-template-columns: 1fr 1fr;
+justify-content: center;
+align-items: flex-end;
+column-gap: 40px;
+font-size: 30px;
+
+font-weight: bold;
+}
+
+.Education-experience-container {
+  display: flex;
+ 
+}
+
+
+.Education-container {
+  border-left:3px solid white;
+  width: 640px;
+  height: 900px;
+  display: grid;
+ grid-template-columns: 600px;
+
+justify-content: space-evenly;
+row-gap: 20px;
+
+}
+
+.box0 {
+  border:1px solid lightgoldenrodyellow;
+ border-radius: 0.5rem;
+
+ height: 200px;
+ display: flex;
+ flex-direction: column;
+justify-content: space-evenly; 
+}
+
+
+
+.deg-date-edu {
+ padding-left: 20px;
+ padding-right: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #00a5ea;
+}
+
+.deg-date-edu img {
+  width: 30px;
+  height: 30px;
+  background-color: lightpink;
+}
+
+.deg-universty, .marks, .divison
+{
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.experience-container {
+  border-left:3px solid white;
+  width: 640px;
+  height: 900px;
+  display: grid;
+ grid-template-columns: 600px;
+
+justify-content: space-evenly;
+row-gap: 20px;
+}
+
+.box1 {
+  border:1px solid lightgoldenrodyellow;
+ border-radius: 0.5rem;
+ height: 200px;
+}
+
+/*######################################################*/
+@media only screen and (max-width:1365px){
+  .Education-page{
+    padding-left: 0px;
+  
+}
+
+}
+
+
+@media only screen and (max-width:1239px){
+
+  .Education-page{
+   height: 800px;
+}
+
+  .box0,.box1 {
+    width: 500px;
+    height: 140px;
+    justify-content: space-between; 
+   
+   
+  }
+
+  
+
+.Education-experience-heading {
+  width: 1100px;
+  column-gap: 50px;
+font-size: 28px;
+}
+
+.Education-heading, .experience-heading {
+ 
+width: 500px;
+}
+
+.Education-heading {
+  padding-left: 30px;
+}
+
+.Education-experience-container {
+  width: 1100px;
+}
+
+  .Education-container, .experience-container {
+    width: 550px;
+    height: 650px;
+    grid-template-columns: 450px;
+    row-gap: 0px;
+    margin-right: 50px;
+
+  }
+
+.deg-date-edu {
+font-size: 15px;
+ }
+
+.deg-date-edu img {
+ width: 25px;
+ height: 25px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 15px;
+}
+
+
+}
+
+
+@media only screen and (max-width:1042px){
+  .journey {
+    font-size: 35px;
+  }
+
+  .Education-page{
+   height: 800px;
+}
+
+  .box0,.box1 {
+    width: 450px;
+    height: 135px;
+    justify-content: space-between; 
+   
+   
+  }
+
+
+.Education-experience-heading {
+  width: 1000px;
+  column-gap: 50px;
+font-size: 25px;
+}
+
+.Education-heading, .experience-heading {
+ 
+width: 400px;
+}
+
+.Education-heading {
+  padding-right: 70px;
+}
+
+.Education-experience-container {
+  width: 1000px;
+}
+
+  .Education-container, .experience-container {
+    width: 550px;
+    height: 600px;
+    grid-template-columns: 400px;
+    row-gap: 0px;
+    margin-right: 50px;
+
+  }
+
+.deg-date-edu {
+font-size: 15px;
+ }
+
+.deg-date-edu img {
+ width: 25px;
+ height: 25px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 15px;
+}
+
+
+}
+
+
+@media only screen and (max-width:923px){
+  .journey {
+    font-size: 30px;
+  }
+
+  .Education-page{
+   height: 800px;
+}
+
+  .box0,.box1 {
+    width: 400px;
+    height: 130px;
+    justify-content: space-between; 
+   
+  }
+
+
+.Education-experience-heading {
+  width: 900px;
+  column-gap: 40px;
+font-size: 25px;
+}
+
+.Education-heading, .experience-heading {
+ 
+width: 400px;
+}
+
+.Education-heading {
+  padding-right: 80px;
+}
+
+.Education-experience-container {
+  width: 870px;
+}
+
+  .Education-container, .experience-container {
+    width: 450px;
+    height: 600px;
+    grid-template-columns: 350px;
+    row-gap: 0px;
+    margin-right: 50px;
+
+  }
+
+.deg-date-edu {
+font-size: 14px;
+ }
+
+.deg-date-edu img {
+ width: 20px;
+ height: 20px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 14px;
+}
+
+
+}
+
+
+
+@media only screen and (max-width:810px){
+ 
+  .journey {
+    font-size: 30px;
+  }
+
+
+  .Education-page{
+   height: 800px;
+}
+
+  .box0,.box1 {
+    width: 350px;
+    height: 130px;
+    justify-content: space-between; 
+   
+   
+  }
+
+
+.Education-experience-heading {
+  width: 800px;
+  column-gap: 40px;
+font-size: 25px;
+}
+
+.Education-heading, .experience-heading {
+  
+width: 400px;
+}
+
+.Education-heading {
+  padding-right: 80px;
+}
+
+.Education-experience-container {
+  width: 820px;
+}
+
+  .Education-container, .experience-container {
+    width: 350px;
+    height: 600px;
+    grid-template-columns: 300px;
+    row-gap: 0px;
+    margin-right: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+
+.deg-date-edu {
+font-size: 14px;
+   padding-left: 5px;
+    padding-right: 5px;
+
+ }
+
+.deg-date-edu img {
+ width: 20px;
+ height: 20px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 14px;
+  padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+
+}
+
+
+
+@media only screen and (max-width:768px){
+
+  .Education-page{
+   height: 800px;
+}
+
+  .box0,.box1 {
+    width: 300px;
+    height: 130px;
+    justify-content: space-between; 
+   
+   
+  }
+
+
+.Education-experience-heading {
+  width: 670px;
+  column-gap: 15px;
+font-size: 20px;
+height: 30px;
+}
+
+.Education-heading, .experience-heading {
+  
+width: 300px;
+
+}
+
+.experience-heading {
+  padding-left: 15px;
+}
+
+.Education-heading {
+  padding-left: -20px;
+}
+
+.Education-experience-container {
+  width: 660px;
+}
+
+  .Education-container, .experience-container {
+    width: 300px;
+    height: 600px;
+    grid-template-columns: 250px;
+    row-gap: 0px;
+    margin-right: 50px;
+
+  }
+
+.deg-date-edu {
+font-size: 14px;
+ }
+
+.deg-date-edu img {
+ width: 20px;
+ height: 20px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 14px;
+}
+
+
+}
+
+
+@media only screen and (max-width:425px){
+
+  .Education-page{
+   height: 700px;
+}
+
+  .box0,.box1 {
+    width: 180px;
+    height: 130px;
+    justify-content: space-between; 
+   
+   
+  }
+
+
+.Education-experience-heading {
+  width: 390px;
+  column-gap: 15px;
+font-size: 14px;
+}
+
+.Education-heading, .experience-heading {
+ 
+width: 185px;
+
+}
+
+.experience-heading {
+  padding-left: 15px;
+}
+
+.Education-heading {
+  padding-left: -20px;
+}
+
+.Education-experience-container {
+  width: 400px;
+}
+
+  .Education-container, .experience-container {
+    width: 180px;
+    height: 550px;
+    grid-template-columns: 140px;
+    row-gap: 0px;
+   
+
+  }
+
+  .experience-container {
+    padding-left: 8px;
+  }
+
+  .Education-container {
+    padding-left: 8px;
+  }
+
+.deg-date-edu {
+font-size: 12px;
+ }
+
+.deg-date-edu img {
+ width: 15px;
+ height: 15px;
+}
+
+.deg-universty, .marks, .divison {
+  font-size: 12px;
+}
+
+.box1 {
+ 
+}
+
+.journey {
+  font-size: 25px;
+}
+}
+

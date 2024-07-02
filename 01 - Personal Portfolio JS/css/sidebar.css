@@ -1,0 +1,78 @@
+.sidebar {
+
+  position: fixed;
+  background-color: rgb(235, 238, 230);
+  top: 0;
+  bottom: 0;
+  right:0;
+  width: 300px;
+ 
+}
+
+.sidbar-link {
+  display: flex;
+ 
+  margin-top:100px;
+}
+
+.sidbar-link-container {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+ height:500px;
+}
+
+.sidbar-link-container li a {
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 3px black, 0 0 3px lightskyblue;
+}
+
+.sidbar-link-container li a:hover {
+  color: lightseagreen;
+  transition: 0.15s;
+}
+
+.sidbar-link-container li {
+  list-style: none;
+}
+
+.button-exist {
+  background-color: white;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  padding: 5px;
+  border: none;
+ width: 50px;
+ box-shadow: 0 0 2px;
+ 
+}
+
+.add-sidebar-js {
+  display: none;
+}
+
+.menu-js {
+  display: none;
+}
+
+.social-link {
+  
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-link a img {
+  width: 50px;
+ 
+}
+
+.menu-icon{
+  color: white;
+}
+

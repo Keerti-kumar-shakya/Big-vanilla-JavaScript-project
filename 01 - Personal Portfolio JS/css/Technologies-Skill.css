@@ -1,0 +1,809 @@
+.Technologies-Skills-page{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+
+.tech-skill-head {
+ 
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.tech-skill-head span{
+  color: #04adf3;
+}
+
+.Technologies-Skills-container {
+ 
+  width: 1200px;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Technologies-container,.skills-container {
+ 
+  width:1200px;
+  height: 900px;
+  }
+
+  .Technologies-container {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .flip-card {
+    
+    width: 350px;
+    height: 400px;
+    border-radius: 1rem;
+    perspective: 1000px;
+   
+    background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    
+    background-position: center center;
+ 
+   position: relative;
+   border: none;
+  }
+
+
+
+  .card-1 {
+   
+    filter: hue-rotate(150deg);
+    
+  }
+
+  .card-2 {
+    
+    filter: hue-rotate(300deg);
+  }
+
+  .card-3 {
+    
+    filter: hue-rotate(0deg);
+  }
+
+
+  .back-card {
+   
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transform: rotateY(180deg);
+    padding-top: 20px;
+   transition: all 0.9s ease-in-out;
+  }
+
+  .back-card, .front-card{
+    
+    position: absolute;
+    width: 350px;
+   height: 400px;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    border: none;
+
+  }
+
+  .flip-card:hover .back-card{
+    
+    transform: rotateY(0deg);
+   
+  }
+
+
+  .front-card {
+    display: flex;
+   align-items:end;
+   padding-bottom: 30px;
+   
+  }
+
+  .front-box {
+    
+    position: relative;
+ width: 350px;
+ height: 250px;
+ border-radius: 0px 0px 1rem 1rem;
+ background-color: rgba(22, 21, 21,0.811);
+ box-shadow: rgb(0, 102, 255) 0px 10px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  }
+
+  .contain-img {
+    
+    position: absolute;
+    left: 30px;
+    top: -60px;
+    width:100px;
+    height: 100px;
+    border-radius: 1rem;
+    box-shadow: rgb(0, 102, 255) 0px 10px 60px 0px, rgb(0, 200, 255) 0px 18px 36px -18px;
+  }
+
+  .contain-img img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    background-color: rgba(255, 255, 255,0.811);
+    border-radius: 1rem;
+  }
+
+  .topics-hover {
+    width: 250px;
+    color: white;
+    text-shadow:0 0 15px white, 0 0 15px green; 
+  }
+
+  ol {
+   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 400px;
+  }
+
+  ol li{
+    font-weight: bold;
+  }
+
+.skills-container{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .skills-box {
+   
+    width: 1000px;
+    height: 380px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .html-box, .css-box2, .js-box3 {
+    
+  }
+
+  .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+    
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+  .percentage-maths, .percentage-maths2, .percentage-maths3 {
+    color: white;
+    font-size: 25px;
+  }
+
+  .tech-para-html, .tech-para-css2, .tech-para-js3 {
+    
+    font-size: 25px;
+    color: white;
+   color: lightcoral;
+    
+  }
+
+  .tech-para-css2{
+    color: #04adf3;
+  }
+
+  .tech-para-js3 {
+    color: yellow;
+  }
+
+  .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+   
+    width: 800px;
+    height: 40px;
+   background-color: white;
+  }
+
+  .html-percentage, .css-percentage2, .js-percentage3 {
+    
+    width: 620px;
+    height: 40px;
+    border-radius: 0px 1rem 1rem 0px;
+    background-color: orangered;
+  }
+
+  .css-percentage2{
+    background-color: #04adf3;
+    width: 550px;
+  }
+
+  .js-percentage3{
+    background-color: rgb(235, 235, 105);
+    width: 300px;
+  }
+
+/*##################################################*/
+
+@media only screen and (max-width:1310px){
+  .Technologies-Skills-page {
+    padding-left: 0px;
+  }
+
+  .Technologies-Skills-container {
+    max-width: 1030px;
+  }
+
+  .Technologies-container,.skills-container{
+    
+    width: 1030px;
+  }
+
+  .tech-skill-head {
+    font-size: 35px;
+  }
+
+  .flip-card {
+    width: 300px ;
+    height: 30px ;
+  }
+
+  .back-card, .front-card {
+    width: 300px ;
+    height: 350px;
+  }
+
+  .front-box {
+    height: 200px;
+  }
+
+  .card-1, .card-2, .card-3 {
+
+    height: 350px;
+    width: 300px ;
+  }
+
+  ol {
+    height: 350px;
+    width: 300px ;
+  
+  }
+
+  ol li {
+font-size: 14px;
+
+  }
+
+  .skills-box {
+    width: 800px;
+   
+  }
+
+  .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+    width: 600px;
+    height: 27px;
+  }
+
+  .percentage-maths, .percentage-maths2, .percentage-maths3 {
+    font-size: 20px;
+  }
+
+  .tech-para-html, .tech-para-css2, .tech-para-js3 {
+    font-size: 20px;
+  }
+
+  .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+    width: 600px;
+    height: 30px;
+  }
+
+  .html-percentage {
+    width: 520px;
+    height: 30px;
+  }
+
+  .css-percentage2 {
+    width: 480px;
+    height: 30px;
+  }
+
+  .js-percentage3 {
+    width: 200px;
+    height: 30px;
+  }
+
+  
+  .contain-img{
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: -40px;
+  }
+
+  .contain-img img {
+   width: 80px;
+   height: 80px;
+  }
+}
+
+
+
+@media only screen and (max-width:1003px){
+
+
+  .Technologies-Skills-container {
+    max-width: 885px;
+  }
+
+  .Technologies-container,.skills-container{
+    
+    width: 885px;
+  }
+
+  .tech-skill-head {
+    font-size: 30px;
+  }
+
+  .flip-card {
+    width: 300px ;
+    height: 30px ;
+  }
+
+  .back-card, .front-card {
+    width: 260px ;
+    height: 310px;
+  }
+
+  .front-box {
+    height: 180px;
+    width: 260px;
+  }
+
+  .card-1, .card-2, .card-3 {
+
+    width: 260px ;
+    height: 310px;
+  }
+
+  ol {
+    width: 260px ;
+    height: 310px;
+  }
+
+  ol li {
+font-size: 12px;
+
+  }
+
+  .skills-box {
+    width: 600px;
+   
+  }
+
+  .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+    width: 500px;
+    height: 27px;
+  }
+
+  .percentage-maths, .percentage-maths2, .percentage-maths3 {
+    font-size: 16px;
+  }
+
+  .tech-para-html, .tech-para-css2, .tech-para-js3 {
+    font-size: 16px;
+  }
+
+  .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+    width: 500px;
+    height: 25px;
+  }
+
+  .html-percentage {
+    width: 440px;
+    height: 25px;
+  }
+
+  .css-percentage2 {
+    width: 400px;
+    height: 25px;
+  }
+
+  .js-percentage3 {
+    width: 200px;
+    height: 25px;
+  }
+
+  
+  .contain-img{
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: -35px;
+  }
+
+  .contain-img img {
+   width: 60px;
+   height: 60px;
+  }
+}
+
+
+@media only screen and (max-width:885px){
+  .Technologies-Skills-container {
+    max-width: 740px;
+  }
+
+  .Technologies-container,.skills-container{
+    
+    width: 740px;
+  }
+
+  .tech-skill-head {
+    font-size: 30px;
+  }
+
+  .flip-card {
+    width: 300px ;
+    height: 30px ;
+  }
+
+  .back-card, .front-card {
+    width: 210px ;
+    height: 260px;
+  }
+
+  .front-box {
+    height: 180px;
+    width: 210px;
+  }
+
+  .card-1, .card-2, .card-3 {
+
+    width: 210px ;
+    height: 260px;
+  }
+
+  ol {
+    width: 210px ;
+    height: 260px;
+  }
+
+  ol li {
+font-size: 10px;
+
+  }
+
+  .skills-box {
+    width: 500px;
+   
+  }
+
+  .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+    width: 400px;
+    height: 27px;
+  }
+
+  .percentage-maths, .percentage-maths2, .percentage-maths3 {
+    font-size: 16px;
+  }
+
+  .tech-para-html, .tech-para-css2, .tech-para-js3 {
+    font-size: 16px;
+  }
+
+  .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+    width: 400px;
+    height: 22px;
+  }
+
+  .html-percentage {
+    width: 340px;
+    height: 22px;
+  }
+
+  .css-percentage2 {
+    width: 300px;
+    height: 22px;
+  }
+
+  .js-percentage3 {
+    width: 100px;
+    height: 22px;
+  }
+
+  
+  .contain-img{
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: -35px;
+  }
+
+  .contain-img img {
+   width: 60px;
+   height: 60px;
+  }
+}
+
+
+
+@media only screen and (max-width:740px){
+.Technologies-Skills-page {
+justify-content: start;
+
+}
+
+.tech-skill-head {
+  margin-top: 20px;
+}
+
+  .Technologies-Skills-container {
+    max-width: 300px;
+   
+    
+  }
+
+  .Technologies-container,.skills-container{
+    margin-top: 20px;
+    width: 300px;
+   
+  }
+
+  .skills-container {
+    height: 400px;
+  }
+
+  .skills-box {
+    padding-top: 10px;
+    justify-content: start;
+  }
+
+  .tech-skill-head {
+    font-size: 25px;
+  }
+
+  .flip-card {
+    width: 300px ;
+    height: 30px ;
+  }
+
+  .back-card, .front-card {
+    width: 200px ;
+    height: 240px;
+  }
+
+  .front-box {
+    height: 120px;
+    width: 200px;
+  }
+
+  .card-1, .card-2, .card-3 {
+    margin-top: 10px;
+    width: 200px ;
+    height: 240px;
+  }
+
+  ol {
+    width: 200px ;
+    height: 240px;
+  }
+
+  ol li {
+font-size: 9px;
+
+  }
+
+  .skills-box {
+    width: 400px;
+   
+  }
+
+  .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+    width: 300px;
+    height: 25px;
+  }
+
+  .percentage-maths, .percentage-maths2, .percentage-maths3 {
+    font-size: 14px;
+  }
+
+  .tech-para-html, .tech-para-css2, .tech-para-js3 {
+    font-size: 14px;
+  }
+
+  .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+    width: 300px;
+    height: 25px;
+  }
+
+  .html-percentage {
+    width: 240px;
+    height: 25px;
+  }
+
+  .css-percentage2 {
+    width: 200px;
+    height: 25px;
+  }
+
+  .js-percentage3 {
+    width: 100px;
+    height: 25px;
+  }
+
+  
+  .contain-img{
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: -45px;
+  }
+
+  .contain-img img {
+   width: 60px;
+   height: 60px;
+  }
+
+  .html-box, .css-box2, .js-box3 {
+    padding-top: 10px;
+  }
+}
+
+
+@media only screen and (max-width:425px){
+  .Technologies-Skills-page {
+  justify-content: start;
+  padding-left: 0px;
+  }
+  
+  .Technologies-Skills-page .tech-skill-head {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+    .Technologies-Skills-container {
+      width: 300px;
+     
+    }
+  
+    .Technologies-container,.skills-container{
+      margin-top: 20px;
+      width: 300px;
+     
+    }
+  
+    .skills-container {
+      height: 300px;
+    }
+  
+    .skills-box {
+      padding-top: 10px;
+      justify-content: start;
+    }
+  
+    .tech-skill-head {
+      font-size: 25px;
+    }
+  
+    .flip-card {
+      width: 300px ;
+      height: 30px ;
+    }
+  
+    .back-card, .front-card {
+      width: 200px ;
+      height: 240px;
+    }
+  
+    .front-box {
+      height: 120px;
+      width: 200px;
+    }
+  
+    .card-1, .card-2, .card-3 {
+      margin-top: 20px;
+      width: 200px ;
+      height: 240px;
+    }
+  
+    ol {
+      width: 200px ;
+      height: 240px;
+    }
+  
+    ol li {
+  font-size: 9px;
+  
+    }
+  
+    .skills-box {
+      margin-top: 100px;
+      width: 280px;
+     
+    }
+  
+    .tech-para-html-box, .tech-para-css-box2, .tech-para-js-box3 {
+      width: 280px;
+      height: 25px;
+    }
+  
+    .percentage-maths, .percentage-maths2, .percentage-maths3 {
+      font-size: 14px;
+    }
+  
+    .tech-para-html, .tech-para-css2, .tech-para-js3 {
+      font-size: 14px;
+    }
+  
+    .html-percentage-box, .css-percentage-box2, .js-percentage-box3 {
+      width: 280px;
+      height: 20px;
+    }
+  
+    .html-percentage {
+      width: 240px;
+      height: 20px;
+    }
+  
+    .css-percentage2 {
+      width: 200px;
+      height: 20px;
+    }
+  
+    .js-percentage3 {
+      width: 100px;
+      height: 20px;
+    }
+  
+    
+    .contain-img{
+      width: 60px;
+      height: 60px;
+      left: 20px;
+      top: -45px;
+    }
+  
+    .contain-img img {
+     width: 60px;
+     height: 60px;
+    }
+  
+    .html-box, .css-box2, .js-box3 {
+      padding-top: 10px;
+    }
+
+    .topics-hover {
+      font-size: 13px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
