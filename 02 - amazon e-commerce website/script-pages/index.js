@@ -1,0 +1,61 @@
+import { products, test } from "../data/products.js";
+
+const product_container = document.querySelector('.home-products-container');
+
+
+window.addEventListener('DOMContentLoaded',  () =>{
+  productHomeDisplay()
+})
+
+function productHomeDisplay() {
+  let html = '';
+
+  products.forEach((product) => {
+    const {id, name, image, rating, priceCents, keywords, sizeChartLink} = product;
+    console.log(name);
+    html += `
+    <article class="home-single-product-container">
+    <img class="image-products" src="${image}" alt="image-products">
+    <div class="product-name">${name}</div>
+
+    <div class="rating-count-container">
+      <span class="rating">
+        <img class="rating-img" src="./images/ratings/rating-${rating.stars*10}.png" alt="rating-img">
+      </span>
+      <span class="count">${rating.count}</span>
+    </div>
+
+    <div class="product-price">$${(priceCents/100).toFixed(2)}</div>
+
+    <select class="cart-select-items">
+      <option selected value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+
+    
+    <div class="size-chart">
+      ${sizeChartLink? `<a href="${ sizeChartLink}" target="_blank">Size chart</a>` : 'Size Not Available'}
+    </div>
+    
+    <div class="cart-added">
+      <span>
+        <img class="checkmark-img" src="./images/icons/checkmark.png" alt="cart-checkmark-icon">
+      </span>
+      <span class="product-added-par">Added</span>
+    </div>
+
+    <button class="add-to-cart-btn">add to cart</button>
+  </article>
+
+    `
+  })
+  product_container.innerHTML = html;
+}
