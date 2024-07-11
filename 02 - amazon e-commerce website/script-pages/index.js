@@ -1,4 +1,5 @@
-import { products, test } from "../data/products.js";
+import {products} from '../data/products.js'
+import { checkoutItems } from './cart.js';
 
 const product_container = document.querySelector('.home-products-container');
 
@@ -12,7 +13,7 @@ function productHomeDisplay() {
 
   products.forEach((product) => {
     const {id, name, image, rating, priceCents, keywords, sizeChartLink} = product;
-    console.log(name);
+  
     html += `
     <article class="home-single-product-container">
     <img class="image-products" src="${image}" alt="image-products">
@@ -42,20 +43,47 @@ function productHomeDisplay() {
 
     
     <div class="size-chart">
-      ${sizeChartLink? `<a href="${ sizeChartLink}" target="_blank">Size chart</a>` : 'Size Not Available'}
+      ${sizeChartLink? `<a href="${ sizeChartLink}" target="_blank">Size chart</a>` : ''}
     </div>
     
-    <div class="cart-added">
+    <div class="cart-added js-cart-add-${id}">
       <span>
         <img class="checkmark-img" src="./images/icons/checkmark.png" alt="cart-checkmark-icon">
       </span>
       <span class="product-added-par">Added</span>
     </div>
 
-    <button class="add-to-cart-btn">add to cart</button>
+    <button class="add-to-cart-btn js-add-to-cart-btn"
+    data-id ="${id}"
+    >add to cart</button>
   </article>
 
     `
   })
   product_container.innerHTML = html;
+
+
+  const addToCart = document.querySelectorAll(`.js-add-to-cart-btn`);
+  //console.log(addTOCart);
+
+  addToCart.forEach(function (button) {
+    //console.log(button);
+    button.addEventListener('click', function () {
+      const productId = button.dataset.id;
+      //console.log(productId);
+      checkoutItems(productId)
+      const addedItem = document.querySelector(`.js-cart-add-${productId}`);
+      //console.log(addedItem);
+
+     let setPrevTime;
+
+      clearInterval(setPrevTime)
+      addedItem.classList.add('cart-added-visible');
+        setPrevTime = setTimeout(() => {
+          addedItem.classList.remove('cart-added-visible');
+        }, 2000);
+
+    
+    })
+  })
 }

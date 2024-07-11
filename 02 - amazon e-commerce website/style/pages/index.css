@@ -173,11 +173,17 @@ font-weight: bold;
   margin-bottom:10px;
 }
 
+
 .cart-added{
   margin-bottom:10px;
   display: flex;
   align-items: center;
   column-gap: 5px;
+  visibility: hidden;
+}
+
+.cart-added-visible{
+  visibility: visible;
 }
 
 .checkmark-img{
@@ -189,6 +195,7 @@ font-weight: bold;
 }
 .size-chart{
 margin-bottom: 10px;
+height: 20px;
 }
 
 .add-to-cart-btn{
