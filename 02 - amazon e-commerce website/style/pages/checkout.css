@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body{
+  margin-left: auto;
+  max-width: 80rem;
+  margin-right: auto;
+}
+
+.header-checkout-container{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.amazon-black-logo{
+width: 110px;
+object-fit: cover;
+object-position: center;
+}
+
+.checkout-total-container{
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.checkout-total{
+  color: rgb(19, 110, 106);
+}
+
+.checkout-product-container{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 140px;
+}
+
+.review-para{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.products-order-summary-container{
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+.products-checkout-section{
+  border: 1px solid black;
+ 
+}
+
+.products-order-summary-section{
+  border: 1px solid black;
+}
+
+.product-description-container{
+  border: 1px solid violet;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  column-gap: 25px;
+}
+
+.delivery-date{
+  color: rgb(0, 118, 0);
+  margin-bottom: 20px;
+}
+
+.product-desc{
+  border: 1px solid blue;
+}
+
+.product-price{
+  color: brown;
+  margin-bottom: 5px;
+}
+
+.product-image{
+  border: 1px solid black;
+  max-width: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-name{
+  margin-bottom: 5px;
+}
+
+.product-quantity{
+  display: flex;
+  column-gap:3px;
+  align-items: center;
+}
+
+.product-delete-btn, .product-update-btn{
+border: none;
+background-color: transparent;
+color: rgb(43, 165, 241);
+font-size: 16px;
+text-transform: capitalize;
+}
+
+.delivery-option-container{
+  border: 1px solid blue;
+  display: grid;
+  row-gap: 10px;
+}
+
+.delivery-option-para{
+  font-size: 16px;
+}
+
+.update-quantity-input{
+  max-width: 50px;
+  font-size: 16px;
+}
+
+.shipping-container{
+  display: flex;
+align-items: center;
+column-gap: 5px;
+
+}
+
+.shipping-input{
+appearance: auto;
+box-sizing: border-box;
+margin: 3px 3px 0px 5px;
+cursor: pointer;
+}
+
+.shipping-date{
+  color: rgb(0, 118, 0);
+  margin-bottom:2px;
+}
+
+.shipping-charge{
+  color: lightslategray;
+  font-size: 15px;
+}

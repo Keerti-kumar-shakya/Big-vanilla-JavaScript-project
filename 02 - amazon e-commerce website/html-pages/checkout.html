@@ -5,9 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>checkout</title>
   <link rel="stylesheet" href="../style/pages/checkout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
   <body>
-    
+
+    <header class="header-checkout-container">
+      <img class="amazon-black-logo" src="../images/amazon-logo.png" alt="">
+      <div class="checkout-total-container">
+        Checkout(<span class="checkout-total">0</span>)
+      </div>
+
+      <img class="lock-icon" src="../images/icons/checkout-lock-icon.png" alt="">
+    </header>
+
+    <main class="checkout-product-container">
+      <h4 class="review-para">Review your order</h4>
+      <div class="products-order-summary-container">
+
+        <section class="products-checkout-section">
+          <article class="single-product-checkout">
+            <h3 class="delivery-date">Delivery date: Friday, july 19</h3>
+            <div class="product-description-container">
+             
+                <img class="product-image" src="../images/products/6-piece-non-stick-baking-set.webp" alt="">
+
+                <div class="product-desc">
+                  <h4 class="product-name">Black and Gray Athletic Cotton Socks - 6 Pairs</h5>
+                    <h4 class="product-price">$10.00</h4>
+                    <p class="product-quantity">
+                      Quantity: <span class="product-quantity">0</span>
+                      &nbsp;
+                      <button class="product-update-btn">update</button>
+                      <input class="update-quantity-input" type="number" placeholder="0">
+                      &nbsp;
+                      <button class="product-delete-btn">delete</button>
+                    </p>
+                </div>
+
+                <div class="delivery-option-container">
+                  <h3 class="delivery-option-para">Choose a delivery option:</h3>
+
+                  <div class="shipping-container">
+                    <input class="shipping-input" type="radio" name="shipping" id="">
+                    <div class="shipping-date-charges">
+                      <h4 class="shipping-date">Friday July 19</h4>
+                      <p class="shipping-charge">FREE Shipping</p>
+                    </div>
+                  </div>
+
+                  <div class="shipping-container">
+                    <input class="shipping-input" type="radio" name="shipping" id="">
+                    <div class="shipping-date-charges">
+                      <h4 class="shipping-date">Monday, July 15</h4>
+                      <p class="shipping-charge">$4.99 - Shipping</p>
+                    </div>
+                  </div>
+
+                  <div class="shipping-container">
+                    <input class="shipping-input" type="radio" name="shipping" id="">
+                    <div class="shipping-date-charges">
+                      <h4 class="shipping-date">Saturday July 13</h4>
+                      <p class="shipping-charge">$9.99 - Shipping</p>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="products-order-summary-section"></section>
+      </div>     
+    </main>
+  
     <script src="../script-pages/cart.js" type="module"></script>
   </body>
 </html>

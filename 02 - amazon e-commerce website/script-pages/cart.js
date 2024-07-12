@@ -1,4 +1,4 @@
-
+import { products } from "../data/products.js";
 
 export let cart = [
 
@@ -16,7 +16,8 @@ export let cart = [
    
 
 export function checkoutItems(productId) {
-  console.log(productId);
+ 
+ //console.log(productId);
   let matchingItem;
   
 
@@ -24,7 +25,7 @@ export function checkoutItems(productId) {
 
     if (cartItem.productId === productId) {
       matchingItem = cartItem
-      console.log(matchingItem);
+      //console.log(matchingItem);
     }
   }) 
  
@@ -35,5 +36,57 @@ export function checkoutItems(productId) {
       productId:productId,
       quantity: 1
     })
-  }
 }
+
+checkoutProducts(cart)
+}
+
+
+
+function checkoutProducts(cart) {
+  let checkoutProduct = [];
+//console.log(cart);
+
+cart.forEach((items) => {
+  products.forEach((product) => {
+
+    if (items.productId === product.id) {
+    
+      checkoutProduct.push({
+        product
+      });
+     
+    }
+  })
+})
+  //console.log(checkoutProduct);
+  CheckoutProductDisplay(checkoutProduct)
+}
+
+function CheckoutProductDisplay(product) {
+  let html = '';
+  let displayData = [];
+
+  if (product === undefined) {
+    cart.forEach((items) => {
+      products.forEach((product) => {
+    
+        if (items.productId === product.id) {
+        
+          displayData.push({
+            product
+          });
+         
+        }
+      })
+    })
+  }
+  else{
+    displayData = product;
+  }
+  
+  html +=
+}
+
+CheckoutProductDisplay()
+

@@ -81,9 +81,7 @@ function productHomeDisplay() {
       addedItem.classList.add('cart-added-visible');
         setPrevTime = setTimeout(() => {
           addedItem.classList.remove('cart-added-visible');
-        }, 2000);
-
-    
+        }, 2000);   
     })
   })
 }
