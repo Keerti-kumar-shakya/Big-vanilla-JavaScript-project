@@ -1,12 +1,11 @@
 import {products} from '../data/products.js'
-import { checkoutItems } from './cart.js';
+import { checkoutItems } from '../data/cart.js';
+
+
 
 const product_container = document.querySelector('.home-products-container');
 
-
-window.addEventListener('DOMContentLoaded',  () =>{
-  productHomeDisplay()
-})
+productHomeDisplay()
 
 function productHomeDisplay() {
   let html = '';
@@ -72,6 +71,7 @@ function productHomeDisplay() {
       const productId = button.dataset.id;
       //console.log(productId);
       checkoutItems(productId)
+ 
       const addedItem = document.querySelector(`.js-cart-add-${productId}`);
       //console.log(addedItem);
 
@@ -84,4 +84,10 @@ function productHomeDisplay() {
         }, 2000);   
     })
   })
+
 }
+
+
+
+
+
