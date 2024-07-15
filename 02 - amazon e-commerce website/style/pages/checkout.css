@@ -110,6 +110,17 @@ font-size: 16px;
 text-transform: capitalize;
 }
 
+.remove-container{
+  margin-top: 10px;
+  border: none;
+background-color: transparent;
+color: rgb(43, 165, 241);
+font-size: 16px;
+text-transform: capitalize;
+text-align: center;
+width: 100%;
+}
+
 .delivery-option-container{
   border: 1px solid blue;
   display: grid;

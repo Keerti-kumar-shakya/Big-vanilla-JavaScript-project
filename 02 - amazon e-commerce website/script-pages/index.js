@@ -1,6 +1,6 @@
 import {products} from '../data/products.js'
-import { checkoutItems } from '../data/cart.js';
-
+import { checkoutItems, saveToStorage } from '../data/cart.js';
+import { cart } from '../data/cart.js';
 
 
 const product_container = document.querySelector('.home-products-container');
@@ -68,10 +68,11 @@ function productHomeDisplay() {
   addToCart.forEach(function (button) {
     //console.log(button);
     button.addEventListener('click', function () {
+
       const productId = button.dataset.id;
       //console.log(productId);
       checkoutItems(productId)
- 
+
       const addedItem = document.querySelector(`.js-cart-add-${productId}`);
       //console.log(addedItem);
 
@@ -81,10 +82,24 @@ function productHomeDisplay() {
       addedItem.classList.add('cart-added-visible');
         setPrevTime = setTimeout(() => {
           addedItem.classList.remove('cart-added-visible');
-        }, 2000);   
+        }, 2000); 
+        
+        updateCartQuantity()
     })
   })
 
+
+  function updateCartQuantity() {
+    const TotalCartQuantity = cart.reduce((initialQuantity, items) =>{
+      return initialQuantity + items.quantity;
+    }, 0)
+  
+    console.log(TotalCartQuantity);
+   document.querySelector('.js-order-total').innerHTML = TotalCartQuantity;
+   saveToStorage()
+
+  }
+  updateCartQuantity()
 }
 
 
