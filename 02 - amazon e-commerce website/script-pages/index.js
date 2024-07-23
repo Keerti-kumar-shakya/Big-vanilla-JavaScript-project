@@ -78,7 +78,7 @@ function productHomeDisplay() {
 
      let setPrevTime;
 
-      clearInterval(setPrevTime)
+      clearTimeout(setPrevTime)
       addedItem.classList.add('cart-added-visible');
         setPrevTime = setTimeout(() => {
           addedItem.classList.remove('cart-added-visible');
