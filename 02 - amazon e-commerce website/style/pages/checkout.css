@@ -64,6 +64,13 @@ object-position: center;
   border: 1px solid black;
 }
 
+.single-product-checkout{
+  border: 1px solid rgb(162, 173, 184);
+  border-radius: 0.2rem;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
 .product-description-container{
   border: 1px solid violet;
   display: grid;
@@ -159,3 +166,64 @@ cursor: pointer;
   color: lightslategray;
   font-size: 15px;
 }
+
+/* order summary */
+.products-order-summary-section{
+ max-height: 320px;
+ border: 1px solid rgb(162, 173, 184);
+ border-radius: 0.2rem;
+ font-family: Roboto;
+ color: rgb(39, 38, 38);
+ padding: 15px;
+}
+
+.summary-para{
+  margin-bottom: 20px;
+}
+
+.product-details-container{
+
+  margin-bottom: 20px;
+}
+
+.taxation-container{
+  border-bottom: 1px solid rgb(167, 176, 185);
+ 
+}
+
+
+
+.items-container,
+.shipping-handling-container,
+.before-tax-container,
+.after-tax-container{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.order-total-container{
+ 
+  padding:20px 0px 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: brown;
+}
+
+.items-para,
+.shipping-para,
+.before-tax-para,
+.after-tax-para {
+ color: rgb(71, 80, 88);
+}
+
+.place-your-order-btn{
+  border: none;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  background-color: #FFD814;
+  border-radius: 0.4rem;
+}
+

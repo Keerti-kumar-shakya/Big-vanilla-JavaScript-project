@@ -2,6 +2,7 @@ import { cart, loadFromStorage, updateDeliveryOptions } from "../../data/cart.js
 import { getProduct } from "../../data/products.js";
 import { saveToStorage } from "../../data/cart.js";
 import { getDeliveryOption, deliveryOptions } from "../../data/deliveryOptionData.js";
+import { OrderSummary } from "./paymentSummary.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
 
@@ -9,18 +10,17 @@ const CheckProductsContainer = document.querySelector('.products-checkout-sectio
 
 
 export function CheckoutProductDisplay() {
+  OrderSummary()
   saveToStorage()
   loadFromStorage()
   let html = '';
 
 cart.forEach((cartItem) =>  {
-
   const productId = cartItem.productId;
   const matchingItem =  getProduct(productId);
   const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
   const productQuantity = cartItem.quantity;
  
-
   const {id, name, image, keywords, priceCents, rating} = matchingItem;
 
   const today = dayjs();
