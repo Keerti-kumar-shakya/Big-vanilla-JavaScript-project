@@ -1,7 +1,7 @@
 import {products} from '../data/products.js'
 import { checkoutItems, saveToStorage } from '../data/cart.js';
 import { cart } from '../data/cart.js';
-
+import moneyFormat from '../utils/money.js';
 
 const product_container = document.querySelector('.home-products-container');
 
@@ -25,7 +25,7 @@ function productHomeDisplay() {
       <span class="count">${rating.count}</span>
     </div>
 
-    <div class="product-price">$${(priceCents/100).toFixed(2)}</div>
+    <div class="product-price">$${moneyFormat(priceCents)}</div>
 
     <select class="cart-select-items">
       <option selected value="1">1</option>
@@ -39,7 +39,6 @@ function productHomeDisplay() {
       <option value="9">9</option>
       <option value="10">10</option>
     </select>
-
     
     <div class="size-chart">
       ${sizeChartLink? `<a href="${ sizeChartLink}" target="_blank">Size chart</a>` : ''}

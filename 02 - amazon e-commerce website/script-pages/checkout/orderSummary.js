@@ -4,18 +4,17 @@ import { saveToStorage } from "../../data/cart.js";
 import { getDeliveryOption, deliveryOptions } from "../../data/deliveryOptionData.js";
 import { OrderSummary } from "./paymentSummary.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-
+import moneyFormat from "../../utils/money.js";
 
 const CheckProductsContainer = document.querySelector('.products-checkout-section');
 
-
 export function CheckoutProductDisplay() {
-  OrderSummary()
   saveToStorage()
   loadFromStorage()
   let html = '';
 
 cart.forEach((cartItem) =>  {
+
   const productId = cartItem.productId;
   const matchingItem =  getProduct(productId);
   const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId)
@@ -26,7 +25,7 @@ cart.forEach((cartItem) =>  {
   const today = dayjs();
   const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
   const dateString = deliveryDate.format('dddd, MMMM D')
-  const productPrice = ((cartItem.quantity *priceCents)/100).toFixed(2)
+  const productPrice = ((cartItem.quantity * moneyFormat(priceCents)))
 //console.log(name);
   html += `
   <article class="single-product-checkout js-single-product-checkout-${id}"
@@ -92,13 +91,14 @@ updateValue.forEach( (value) =>{
     }
    cart.forEach((items) => {
     
+
       if (items.productId === productId) {
         console.log(items.productId);
         items.quantity += quantity;
         console.log(cart);
         saveToStorage()
         loadFromStorage()
-        location.reload();
+
       } 
       
    })
@@ -113,6 +113,7 @@ const inputDelete = document.querySelectorAll(`.js-delete-btn`);
 
 inputDelete.forEach( (deleteQuantity) =>{
   deleteQuantity.addEventListener('click', (e) =>{
+
     const productId = e.currentTarget.dataset.id;
     console.log(productId);
    const containerRemove = document.querySelector(`.js-single-product-checkout-${productId}`);
@@ -125,6 +126,7 @@ inputDelete.forEach( (deleteQuantity) =>{
         if(items.quantity === 1){
           cart.splice(index, 1)
           CheckoutProductDisplay()
+          OrderSummary()
         } 
       }
       
@@ -136,6 +138,7 @@ inputDelete.forEach( (deleteQuantity) =>{
         saveToStorage()
         loadFromStorage()
         CheckoutProductDisplay()
+        OrderSummary()
       }  
       
    })
@@ -146,19 +149,24 @@ inputDelete.forEach( (deleteQuantity) =>{
 // remove full container
 document.querySelectorAll('.js-remove-container').forEach(component => {
   component.addEventListener('click', (e) =>{
+
      const productId = e.currentTarget.dataset.id;
-   console.log(productId);
+    console.log(productId);
    
-  cart.forEach( (items, index) =>{
+   cart.forEach( (items, index) =>{
+
+
     if (items.productId === productId) {
       
         cart.splice(index, 1)
-      
+       
     }
+
   })
   saveToStorage()
   console.log(cart);
   CheckoutProductDisplay()
+  OrderSummary()
   })
 });
 
@@ -203,5 +211,9 @@ document.querySelectorAll('.js-remove-container').forEach(component => {
       console.log(cart);
     });
    });
+ 
+   OrderSummary()
+   
+ 
 }
 

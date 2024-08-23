@@ -1,5 +1,4 @@
 import { CheckoutProductDisplay } from "../script-pages/checkout/orderSummary.js";
-
 export let cart;
 
 loadFromStorage();
