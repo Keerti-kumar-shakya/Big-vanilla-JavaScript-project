@@ -4,6 +4,7 @@ import { products } from "../data/products.js";
 import moneyFormat from "../utils/money.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
+
 const newCart = JSON.parse(localStorage.getItem('newCart')) || [];
 
 export const orders = JSON.parse(localStorage.getItem('orders')) || [ 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 export function addOrder(order) {
+  
 
   orders.unshift(order);
 
@@ -94,8 +96,19 @@ export function orderDetails() {
   })
   
  document.querySelector('.order-placed-container').innerHTML = html;
-}
 
+ const tracking = document.querySelectorAll('.tracking-placed-order-button');
+ //console.log(tracking);
+
+ tracking.forEach(element => {
+  element.addEventListener('click', (e) => {
+ const dataId = e.currentTarget.dataset.id;
+  //console.log(dataId);
+  // trackingId(dataId);
+   localStorage.setItem('dataId', JSON.stringify(dataId))
+  })
+ });
+}
 
 
 function orderProduct(productOrder, orderTime) {
@@ -105,7 +118,6 @@ let html = '';
 console.log(productOrder);
 
   
-
  const newOrders = productOrder.map((items) => {
   let orderValues = []
   products.map((product) => {
@@ -160,7 +172,8 @@ console.log(newOrders);
     const dateString = OrderPlacedDate.format('MMMM D')
     console.log(image);
     html +=`
-    <div class = "tracking-image-placed-order-btn-container">
+    <div class = "tracking-image-placed-order-btn-container"
+    >
     <div class = "tracking-image-placed-order">
     <img class="tracking-product-image" src="/${image}" alt="">
     
@@ -174,13 +187,21 @@ console.log(newOrders);
     </button>
     </div>
     </div>
-    <button class="tracking-placed-order-button">track package</button>  
+
+    <a href="../html-pages/tracking.html">
+    <button 
+    class="tracking-placed-order-button"
+    data-id = ${id}
+    >track package</button>  
+    </a>
+  
     </div>
     `
   });
-  
-  
+    
   return html;
-  
+
  }
 
+
+   
